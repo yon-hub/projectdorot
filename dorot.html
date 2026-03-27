@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dorot , Judaism, Handed Over.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream:        #FAF7F2;
+    --parchment:    #F2EDE3;
+    --warm-white:   #FFFEF9;
+    --indigo:       #1B2A4A;
+    --indigo-deep:  #0F1E36;
+    --indigo-mid:   #253868;
+    --indigo-light: #3A5288;
+    --clay:         #B85C38;
+    --clay-bright:  #D4663C;
+    --clay-dim:     rgba(184,92,56,0.10);
+    --gold:         #C4913A;
+    --gold-dim:     rgba(196,145,58,0.15);
+    --text-dark:    #0F1E36;
+    --text-mid:     #3A4A6B;
+    --text-light:   #7A8AAB;
+    --border:       #DDD8CE;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Instrument Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── TOP BANNER ── */
+  .top-banner {
+    background: var(--indigo-deep);
+    padding: 0.6rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--clay);
+  }
+  .banner-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .menorah-mark {
+    display: flex;
+    gap: 2px;
+    align-items: flex-end;
+  }
+  .menorah-mark span {
+    display: block;
+    width: 3px;
+    background: var(--gold);
+    opacity: 0.8;
+    border-radius: 2px 2px 0 0;
+  }
+  .menorah-mark span:nth-child(1) { height: 10px; }
+  .menorah-mark span:nth-child(2) { height: 13px; }
+  .menorah-mark span:nth-child(3) { height: 16px; }
+  .menorah-mark span:nth-child(4) { height: 19px; }
+  .menorah-mark span:nth-child(5) { height: 22px; }
+  .menorah-mark span:nth-child(6) { height: 19px; }
+  .menorah-mark span:nth-child(7) { height: 16px; }
+  .menorah-mark span:nth-child(8) { height: 13px; }
+  .menorah-mark span:nth-child(9) { height: 10px; }
+
+  .banner-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.73rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+  }
+  .banner-right {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--indigo-deep);
+    padding: 5.5rem 2.5rem 4.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(196,145,58,0.07) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  }
+  .hero-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.1s forwards;
+  }
+  .hero-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(3.4rem, 7.5vw, 6.5rem);
+    font-weight: 400;
+    line-height: 1.0;
+    color: var(--warm-white);
+    margin-bottom: 1.8rem;
+    letter-spacing: -0.01em;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.25s forwards;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--clay-bright);
+  }
+  .hero-hebrew {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: rgba(196,145,58,0.6);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.35s forwards;
+  }
+  .hero-desc {
+    font-size: 1.2rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.65);
+    max-width: 620px;
+    margin-bottom: 3.5rem;
+    font-weight: 400;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.45s forwards;
+  }
+  .hero-desc strong { color: rgba(255,255,255,0.92); font-weight: 600; }
+
+  .hero-stats {
+    display: flex;
+    gap: 3.5rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.6s forwards;
+  }
+  .stat {
+    padding-left: 1rem;
+    border-left: 2px solid var(--clay);
+  }
+  .stat-number {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    color: var(--warm-white);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    font-weight: 500;
+  }
+
+  /* ── QUOTE BAND ── */
+  .quote-band {
+    background: var(--clay);
+    padding: 1.8rem 2.5rem;
+    text-align: center;
+  }
+  .quote-band blockquote {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.55rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.96);
+    max-width: 820px;
+    margin: 0 auto;
+    line-height: 1.45;
+  }
+  .quote-band cite {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    font-style: normal;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-top: 0.8rem;
+  }
+
+  /* ── SECTION BASE ── */
+  section { padding: 5rem 2.5rem; }
+  .section-inner { max-width: 920px; margin: 0 auto; }
+  .section-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 0.9rem;
+    font-weight: 500;
+  }
+  .section-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 400;
+    color: var(--indigo-deep);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .section-lead {
+    font-size: 1.15rem;
+    line-height: 1.78;
+    color: var(--text-mid);
+    max-width: 700px;
+    margin-bottom: 3rem;
+    font-weight: 400;
+  }
+
+  /* ── PROBLEM SECTION ── */
+  .problem-section { background: var(--parchment); }
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+  .problem-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    padding: 2rem 1.8rem;
+    position: relative;
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .problem-card:hover {
+    box-shadow: 0 6px 24px rgba(15,30,54,0.08);
+    transform: translateY(-2px);
+  }
+  .problem-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--clay);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .problem-card:hover::before { transform: scaleX(1); }
+  .problem-number {
+    font-family: 'Instrument Serif', serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    color: rgba(184,92,56,0.2);
+    line-height: 1;
+    margin-bottom: 0.6rem;
+  }
+  .problem-stat {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--clay);
+    margin-bottom: 0.4rem;
+    line-height: 1.1;
+  }
+  .problem-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .problem-desc {
+    font-size: 0.95rem;
+    line-height: 1.72;
+    color: var(--text-mid);
+  }
+
+  /* ── PRODUCT SECTION ── */
+  .product-section { background: var(--warm-white); }
+  .kit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+  .kit-card {
+    border: 1px solid var(--border);
+    padding: 1.8rem 1.6rem;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  }
+  .kit-card:hover {
+    border-color: var(--clay);
+    box-shadow: 0 6px 24px rgba(15,30,54,0.07);
+    transform: translateY(-3px);
+  }
+  .kit-age {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+  }
+  .kit-name {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--indigo-deep);
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+  }
+  .kit-hebrew {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--gold);
+    margin-bottom: 0.9rem;
+  }
+  .kit-desc {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--text-mid);
+    margin-bottom: 1.2rem;
+  }
+  .kit-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .kit-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    border: 1px solid var(--border);
+    padding: 0.2rem 0.5rem;
+    background: var(--warm-white);
+  }
+
+  /* ── PHILOSOPHY ── */
+  .philosophy-section { background: var(--parchment); }
+  .philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+  .philosophy-card {
+    border: 1px solid var(--border);
+    padding: 2.2rem 2rem;
+    background: var(--warm-white);
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 1.2rem;
+    align-items: start;
+    transition: border-color 0.25s, box-shadow 0.25s;
+  }
+  .philosophy-card:hover {
+    border-color: var(--indigo-light);
+    box-shadow: 0 4px 20px rgba(15,30,54,0.07);
+  }
+  .philosophy-icon {
+    width: 52px; height: 52px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+  }
+  .philosophy-icon.clay { background: var(--clay-dim); color: var(--clay); }
+  .philosophy-icon.indigo { background: rgba(27,42,74,0.08); color: var(--indigo-mid); }
+  .philosophy-icon.gold { background: var(--gold-dim); color: var(--gold); }
+  .philosophy-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--indigo-deep);
+    margin-bottom: 0.5rem;
+  }
+  .philosophy-body {
+    font-size: 0.97rem;
+    line-height: 1.72;
+    color: var(--text-mid);
+  }
+
+  /* ── DARK BAND: MARKET ── */
+  .market-band {
+    background: var(--indigo-deep);
+    padding: 5rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .market-band::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 5% 50%, rgba(184,92,56,0.07) 0%, transparent 50%),
+      radial-gradient(ellipse at 95% 50%, rgba(196,145,58,0.06) 0%, transparent 50%);
+  }
+  .market-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .market-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .market-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 400;
+    color: var(--warm-white);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+  .market-title em { font-style: italic; color: var(--clay-bright); }
+  .market-sub {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.55);
+    max-width: 620px;
+    margin-bottom: 3.5rem;
+  }
+  .market-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+  .market-card {
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.03);
+    padding: 2.2rem 2rem;
+    transition: background 0.25s, border-color 0.25s;
+  }
+  .market-card:hover {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(196,145,58,0.3);
+  }
+  .market-number {
+    font-family: 'Instrument Serif', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: rgba(184,92,56,0.35);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .market-value {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--warm-white);
+    margin-bottom: 0.4rem;
+    line-height: 1.1;
+  }
+  .market-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .market-desc {
+    font-size: 0.92rem;
+    line-height: 1.72;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ── COMPARABLES ── */
+  .comp-section { background: var(--warm-white); }
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+  .comp-card {
+    border: 1px solid var(--border);
+    padding: 2rem 1.8rem;
+    background: var(--cream);
+    position: relative;
+  }
+  .comp-card.center-card {
+    border-color: var(--clay);
+    background: var(--warm-white);
+    box-shadow: 0 8px 32px rgba(184,92,56,0.10);
+  }
+  .comp-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--clay);
+    border: 1px solid var(--clay);
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .comp-badge.gray {
+    color: var(--text-light);
+    border-color: var(--border);
+  }
+  .comp-name {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--indigo-deep);
+    margin-bottom: 0.25rem;
+  }
+  .comp-tagline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 1.1rem;
+    font-weight: 500;
+  }
+  .comp-desc {
+    font-size: 0.95rem;
+    line-height: 1.72;
+    color: var(--text-mid);
+    margin-bottom: 1.2rem;
+  }
+  .comp-what-it-lacks {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: var(--text-light);
+    font-style: italic;
+  }
+  .comp-what-it-lacks strong { color: var(--clay); font-style: normal; font-weight: 600; }
+
+  /* ── FOUNDER ── */
+  .founder-section { background: var(--parchment); }
+  .founder-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .founder-name {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2.3rem;
+    font-weight: 400;
+    color: var(--indigo-deep);
+    margin-bottom: 0.3rem;
+  }
+  .founder-role {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--clay);
+    letter-spacing: 0.02em;
+    margin-bottom: 1.4rem;
+  }
+  .founder-bio {
+    font-size: 1.02rem;
+    line-height: 1.78;
+    color: var(--text-mid);
+    margin-bottom: 1.1rem;
+  }
+  .cred-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .cred-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.97rem;
+    color: var(--text-mid);
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  .cred-list li::before {
+    content: '';
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--clay);
+    flex-shrink: 0;
+    margin-top: 0.5em;
+  }
+  .founder-quote {
+    background: var(--indigo-deep);
+    border-left: 3px solid var(--gold);
+    padding: 2.2rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .founder-quote-text {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.5;
+    margin-bottom: 0.9rem;
+  }
+  .founder-quote-attr {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .why-box {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    padding: 1.8rem 1.8rem;
+  }
+  .why-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+  .why-text {
+    font-size: 0.97rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: var(--indigo-deep);
+    padding: 5rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(196,145,58,0.08) 0%, transparent 55%);
+  }
+  .cta-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+  .cta-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .cta-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    color: var(--warm-white);
+    margin-bottom: 1rem;
+    line-height: 1.15;
+  }
+  .cta-title em { font-style: italic; color: var(--clay-bright); }
+  .cta-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.55);
+    margin: 0 auto 2.5rem;
+    line-height: 1.75;
+  }
+  .cta-buttons {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--clay);
+    color: var(--warm-white);
+    padding: 0.9rem 2.4rem;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--clay-bright); }
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: rgba(255,255,255,0.65);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 0.9rem 2.4rem;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover {
+    border-color: rgba(255,255,255,0.35);
+    color: rgba(255,255,255,0.9);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--indigo-deep);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-logo {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.75);
+  }
+  .footer-logo span { color: var(--gold); }
+  .footer-right {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.animate {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .reveal.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .kit-grid { grid-template-columns: 1fr 1fr; }
+    .market-grid { grid-template-columns: 1fr; }
+    .comp-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    .problem-grid, .philosophy-grid, .founder-grid { grid-template-columns: 1fr; }
+    .kit-grid { grid-template-columns: 1fr; }
+    .hero { padding: 3.5rem 1.5rem 3rem; }
+    section { padding: 3.5rem 1.5rem; }
+    .market-band { padding: 3.5rem 1.5rem; }
+    footer { flex-direction: column; gap: 0.8rem; text-align: center; }
+    .top-banner { flex-direction: column; gap: 0.4rem; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+    .hero-stats { gap: 1.5rem; }
+    .founder-grid { gap: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BANNER -->
+<div class="top-banner">
+  <div class="banner-left">
+    <div class="menorah-mark">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <span class="banner-label">Dorot &nbsp;·&nbsp; Concept Brief &nbsp;·&nbsp; A Team Yon x Common Era Initiative</span>
+  </div>
+  <div class="banner-right">Jewish Identity for the Next Generation</div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Jewish Identity × Child Development</div>
+    <h1 class="hero-title">
+      Judaism isn't passed down.<br>
+      It's <em>handed over.</em>
+    </h1>
+    <div class="hero-hebrew">דּוֹרוֹת &nbsp;, Dorot , Generations</div>
+    <p class="hero-desc">
+      Stage-based Jewish developmental play kits for the next generation of American Jewish families. <strong>What Lovevery built for development, Dorot builds for identity</strong> , beautifully designed, evidence-informed, and rooted in the traditions that have survived 3,000 years.
+    </p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-number">7.5M</div>
+        <div class="stat-label">American Jewish adults</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">58%</div>
+        <div class="stat-label">Non-Orthodox intermarriage rate</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">$2B+</div>
+        <div class="stat-label">Jewish identity spend annually</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">0</div>
+        <div class="stat-label">Lovevery for Jewish families</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<div class="quote-band">
+  <blockquote>"In every generation, each person is obligated to see themselves as if they personally left Egypt."</blockquote>
+  <cite>, Haggadah (Pesach Seder) · The oldest intergenerational transmission technology in human history</cite>
+</div>
+
+<!-- THE PROBLEM -->
+<section class="problem-section">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">The Whitespace</div>
+    <h2 class="section-title reveal">The most enduring culture in human history is losing its next generation.</h2>
+    <p class="section-lead reveal">Modern Jewish families desperately want to pass their identity on. They just don't have a beautiful, intelligent, secular-friendly way to do it from the very beginning.</p>
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <div class="problem-number">01</div>
+        <div class="problem-stat">Only 27%</div>
+        <div class="problem-label">of non-Orthodox Jews raise kids with strong Jewish identity</div>
+        <p class="problem-desc">The fastest-growing Jewish demographic in America identifies as "Jewish but not religious." They want culture without obligation, identity without institution.</p>
+      </div>
+      <div class="problem-card reveal">
+        <div class="problem-number">02</div>
+        <div class="problem-stat">Age 4,17</div>
+        <div class="problem-label">Jewish identity formation typically begins , far too late</div>
+        <p class="problem-desc">Jewish education starts at Hebrew school or day school , years after the most formative developmental windows for identity, language, and values have already closed.</p>
+      </div>
+      <div class="problem-card reveal">
+        <div class="problem-number">03</div>
+        <div class="problem-stat">$0</div>
+        <div class="problem-label">premium consumer products for Jewish families with infants and toddlers</div>
+        <p class="problem-desc">The market offers kitschy Hanukkah toys and cheap seder plates. Not a single premium, developmentally-grounded product line built for Jewish identity formation from birth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- THE PRODUCT -->
+<section class="product-section">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">The Product</div>
+    <h2 class="section-title reveal">Four stages. Birth to adulthood. One continuous thread.</h2>
+    <p class="section-lead reveal">Dorot follows the child , not the Jewish calendar, not the school year. Four developmental stages from 0 to 18, each with a distinct product language matched to how children actually form identity, language, belonging, and meaning at that age.</p>
+    <div class="kit-grid">
+      <div class="kit-card reveal">
+        <div class="kit-age">Stage 1 · Ages 0,3</div>
+        <div class="kit-name">Bereishit</div>
+        <div class="kit-hebrew">בְּרֵאשִׁית , "In the Beginning"</div>
+        <p class="kit-desc">The sensory foundation. Jewish culture arrives through touch, smell, and rhythm before language. Shabbat mobile, havdalah spice rattle, soft challah, high-contrast Hebrew board books. The holidays become first memory, not lesson.</p>
+        <div class="kit-tags">
+          <span class="kit-tag">Sensory</span>
+          <span class="kit-tag">Ritual Objects</span>
+          <span class="kit-tag">Hebrew Sounds</span>
+          <span class="kit-tag">Shabbat</span>
+        </div>
+      </div>
+      <div class="kit-card reveal">
+        <div class="kit-age">Stage 2 · Ages 3,7</div>
+        <div class="kit-name">Sippur</div>
+        <div class="kit-hebrew">סִפּוּר , "Story"</div>
+        <p class="kit-desc">The narrative stage. Children this age are wired for story, character, and moral logic , exactly what Jewish tradition is built from. Torah portion illustrated storybooks, seder plate pretend-play, Purim costume kit, tzedakah box and giving rituals.</p>
+        <div class="kit-tags">
+          <span class="kit-tag">Storytelling</span>
+          <span class="kit-tag">Holidays</span>
+          <span class="kit-tag">Values</span>
+          <span class="kit-tag">Pretend Play</span>
+        </div>
+      </div>
+      <div class="kit-card reveal">
+        <div class="kit-age">Stage 3 · Ages 7,13</div>
+        <div class="kit-name">Chaver</div>
+        <div class="kit-hebrew">חָבֵר , "Friend / Member"</div>
+        <p class="kit-desc">The belonging stage. Jewish identity becomes social , belonging to a people, a history, a land. Hebrew language tools, Jewish history timelines, Israel & diaspora map kit, ethical debate cards (Talmudic style), and bar/bat mitzvah preparation materials.</p>
+        <div class="kit-tags">
+          <span class="kit-tag">Hebrew</span>
+          <span class="kit-tag">History</span>
+          <span class="kit-tag">Ethics</span>
+          <span class="kit-tag">Community</span>
+        </div>
+      </div>
+      <div class="kit-card reveal">
+        <div class="kit-age">Stage 4 · Ages 13,18</div>
+        <div class="kit-name">Daat</div>
+        <div class="kit-hebrew">דַּעַת , "Knowledge / Becoming"</div>
+        <p class="kit-desc">The identity stage. Post-bar mitzvah, Jewish identity either deepens or dissolves. Dorot's final stage meets teenagers where they are: contemporary Jewish thought, Israel complexity, modern antisemitism, and the question every generation must answer , what does it mean to be Jewish today?</p>
+        <div class="kit-tags">
+          <span class="kit-tag">Philosophy</span>
+          <span class="kit-tag">Israel</span>
+          <span class="kit-tag">Modern Judaism</span>
+          <span class="kit-tag">Identity</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy-section">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">The Philosophy</div>
+    <h2 class="section-title reveal">Identity is formed in the first 2,000 days. Not at bar mitzvah.</h2>
+    <p class="section-lead reveal">Dorot is built on the convergence of developmental science and 3,000 years of Jewish wisdom about how culture survives. The Haggadah didn't last this long by accident.</p>
+    <div class="philosophy-grid">
+      <div class="philosophy-card reveal">
+        <div class="philosophy-icon clay">◎</div>
+        <div>
+          <div class="philosophy-title">Developmental windows are non-negotiable</div>
+          <p class="philosophy-body">The brain is most plastic in years 0,3. Language, identity, and emotional memory are laid down during this window , not during Hebrew school. Dorot meets children where the science says to meet them.</p>
+        </div>
+      </div>
+      <div class="philosophy-card reveal">
+        <div class="philosophy-icon gold">✦</div>
+        <div>
+          <div class="philosophy-title">Judaism's genius is its objects and rituals</div>
+          <p class="philosophy-body">Jewish tradition is a multi-sensory technology. Challah, spice boxes, Hanukkah candles, the seder plate , they encode memory in smell, touch, taste, and rhythm. Dorot weaponizes this deliberately.</p>
+        </div>
+      </div>
+      <div class="philosophy-card reveal">
+        <div class="philosophy-icon indigo">▲</div>
+        <div>
+          <div class="philosophy-title">For secular families first, religious families always</div>
+          <p class="philosophy-body">Dorot is designed for the majority , the culturally Jewish, unaffiliated, interfaith family that wants their kid to know who they are. No guilt. No obligation. Just beautiful, intelligent connection.</p>
+        </div>
+      </div>
+      <div class="philosophy-card reveal">
+        <div class="philosophy-icon clay">⬡</div>
+        <div>
+          <div class="philosophy-title">Parents learn too , that's the product</div>
+          <p class="philosophy-body">Dorot kits come with a beautifully-designed parent guide. Short. Modern. Contextual. Many American Jewish parents know they want to pass something on , they just don't know exactly what or how. Dorot teaches both generations at once.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET BAND -->
+<div class="market-band">
+  <div class="market-inner">
+    <div class="market-eyebrow reveal">The Market</div>
+    <h2 class="market-title reveal">The most educated, affluent, and<br>identity-anxious parent demographic <em>in America.</em></h2>
+    <p class="market-sub reveal">American Jewish parents over-index on quality, education, and child development spending. They already pay for Lovevery. They already donate to JCCs and federations. They have never been offered something that does both.</p>
+    <div class="market-grid">
+      <div class="market-card reveal">
+        <div class="market-number">01</div>
+        <div class="market-value">~500K</div>
+        <div class="market-label">Jewish babies born in the US per decade</div>
+        <p class="market-desc">A consistent, addressable cohort of families who are already primed for premium children's products and already spending on Jewish affiliation.</p>
+      </div>
+      <div class="market-card reveal">
+        <div class="market-number">02</div>
+        <div class="market-value">$120,$160</div>
+        <div class="market-label">Per-kit ASP, 4 kits/year subscription</div>
+        <p class="market-desc">Comparable to Lovevery ($80,$120) with a mission premium. Early cohort pricing with philanthropic partnership support for underserved families.</p>
+      </div>
+      <div class="market-card reveal">
+        <div class="market-number">03</div>
+        <div class="market-value">$2B+</div>
+        <div class="market-label">Annual US Jewish federation & philanthropic spend</div>
+        <p class="market-desc">Jewish federations and family foundations already fund identity-building programs. Dorot is the first consumer product worthy of philanthropic co-investment and mass distribution.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARABLES -->
+<section class="comp-section">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">The Whitespace</div>
+    <h2 class="section-title reveal">The intersection nobody is standing in.</h2>
+    <p class="section-lead reveal">Lovevery doesn't do Jewish. Jewish organizations don't do Lovevery. Nobody has earned the trust of both secular Jewish parents and the Jewish institutional ecosystem , yet.</p>
+    <div class="comp-grid">
+      <div class="comp-card reveal">
+        <div class="comp-badge gray">Reference</div>
+        <div class="comp-name">Lovevery</div>
+        <div class="comp-tagline">Stage-based developmental play</div>
+        <p class="comp-desc">The gold standard for evidence-based developmental play kits. Beautiful design, trusted by 1M+ families, $150M+ in revenue. Built by educators and developmental scientists.</p>
+        <p class="comp-what-it-lacks"><strong>Missing:</strong> Cultural and religious identity. Universal by design , has no Jewish version, no culturally specific variant.</p>
+      </div>
+      <div class="comp-card center-card reveal">
+        <div class="comp-badge">Dorot</div>
+        <div class="comp-name">Dorot</div>
+        <div class="comp-tagline">Jewish identity × child development</div>
+        <p class="comp-desc">Stage-based developmental play kits rooted in Jewish culture, holidays, and values. Beautiful, secular-friendly, evidence-informed. Built for the next-gen Jewish family.</p>
+        <p class="comp-what-it-lacks" style="color: var(--clay); font-style: normal;"><strong>The intersection:</strong> Lovevery's product intelligence + Common Era's cultural intelligence + Jewish institutional distribution.</p>
+      </div>
+      <div class="comp-card reveal">
+        <div class="comp-badge gray">Reference</div>
+        <div class="comp-name">Common Era</div>
+        <div class="comp-tagline">Modern Jewish education</div>
+        <p class="comp-desc">Making Judaism contemporary, accessible, and relevant for unaffiliated and interfaith families. Digital-first, secular-friendly, beautifully branded. The cultural permission structure Dorot needs.</p>
+        <p class="comp-what-it-lacks"><strong>Missing:</strong> A physical product line for the 0,6 age range. Entirely digital. No developmental play infrastructure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FOUNDER -->
+<section class="founder-section">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">The Founder</div>
+    <div class="founder-grid">
+      <div class="reveal">
+        <div class="founder-name">Yon Raz-Fridman</div>
+        <div class="founder-role">Founder, Team Yon LLC</div>
+        <p class="founder-bio">An Israeli-born, American-operating serial founder who has spent 20 years building ventures that make essential human capabilities universally accessible.</p>
+        <p class="founder-bio">His first company, Kano, put a build-your-own computer in the hands of 1M+ children across 100+ countries. The insight was simple: capability follows access. Dorot applies that same conviction to Jewish identity, the most portable culture in human history.</p>
+        <ul class="cred-list">
+          <li>Kano Computing , 1M+ kids, 100+ countries</li>
+          <li>AEYE Health , FDA-cleared AI diagnostics</li>
+          <li>Supersocial , acquired 2025</li>
+          <li>Atoms & Cells , K-6 laboratory school, Ohio</li>
+          <li>IDF Operations Team Lead</li>
+          <li>Reichman University (IDC Herzliya), Israel</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="founder-quote">
+          <div class="founder-quote-text">"Jewish identity isn't the problem of the synagogue. It's an infrastructure problem. And infrastructure problems have founder solutions."</div>
+          <div class="founder-quote-attr">, Yon Raz-Fridman</div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">Why this, why now</div>
+          <p class="why-text">The Kano insight was that you don't teach computing by explaining it , you hand a child the materials and let them build. Dorot is that same conviction applied to the most sophisticated intergenerational transmission technology ever built: Jewish culture. The Haggadah has survived every empire. A beautiful wooden seder plate in the hands of a two-year-old can survive assimilation too.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Dorot<span>.</span></div>
+  <div class="footer-right">A Team Yon x Common Era Initiative &nbsp;·&nbsp; New Albany, Ohio &nbsp;·&nbsp; 2026</div>
+</footer>
+
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    reveals.forEach(el => el.classList.add('animate'));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, (i % 4) * 60);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => observer.observe(el));
+  }
+</script>
+</body>
+</html>
