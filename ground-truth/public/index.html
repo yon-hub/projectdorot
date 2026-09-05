@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intrinsic Ground Truth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#/week">
+    <span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+    <span class="brand-name">Ground Truth</span>
+    <span class="brand-sub">Intrinsic Labs · Market Intelligence Engine · v1</span>
+  </a>
+  <nav class="nav">
+    <a href="#/week" data-nav="week">This week</a>
+    <a href="#/operators" data-nav="operators">Operators</a>
+    <a href="#/sponsors" data-nav="sponsors">Sponsors</a>
+    <a href="#/join" data-nav="join">The join</a>
+    <a href="#/model" data-nav="model">Model</a>
+  </nav>
+  <div class="topbar-right">
+    <input id="global-search" class="search" type="search" placeholder="Find an operator or sponsor…" autocomplete="off">
+    <div id="search-results" class="search-results" hidden></div>
+    <span id="agent-pill" class="pill pill-muted" title="Agent reader status">agent —</span>
+  </div>
+</header>
+<main id="view" class="view"></main>
+<aside id="drawer" class="drawer" hidden>
+  <div class="drawer-backdrop" data-close></div>
+  <div class="drawer-panel" id="drawer-panel"></div>
+</aside>
+<div id="toasts" class="toasts"></div>
+<template id="tpl-empty"><div class="empty"><p></p></div></template>
+<script src="/app.js" type="module"></script>
+</body>
+</html>

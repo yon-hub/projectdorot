@@ -1,0 +1,21 @@
+{
+  "name": "intrinsic-ground-truth",
+  "version": "0.1.0",
+  "description": "Intrinsic Ground Truth (IGT) v1 - a living map of AI adoption across lower-middle-market operators and the PE sponsors that own them, converted into named next actions.",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "setup": "node --disable-warning=ExperimentalWarning src/cli.mjs setup",
+    "start": "node --disable-warning=ExperimentalWarning src/cli.mjs serve",
+    "import": "node --disable-warning=ExperimentalWarning src/cli.mjs import",
+    "rescore": "node --disable-warning=ExperimentalWarning src/cli.mjs rescore",
+    "week": "node --disable-warning=ExperimentalWarning src/cli.mjs week",
+    "scan": "node --disable-warning=ExperimentalWarning src/cli.mjs scan",
+    "test": "node --disable-warning=ExperimentalWarning --test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.124.0",
+    "zod": "^4.5.4"
+  }
+}
